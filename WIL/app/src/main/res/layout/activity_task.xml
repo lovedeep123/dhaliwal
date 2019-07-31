@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#A3C1A5"
+    android:layout_height="match_parent"
+    tools:context=".TaskGroup">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AEE0B1"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageButton
+            android:id="@+id/taskGroup_btn_back"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/taskGroup_btn_back_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Task Group 1"
+            android:textColor="#0E77ED"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            tools:layout_editor_absoluteX="185dp"
+            tools:layout_editor_absoluteY="18dp" />
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <Button
+        android:id="@+id/taskGroup_deleteTask"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Delete Task"
+        android:textColor="#0E77ED"
+        android:background="#56E45F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_top"
+        app:layout_constraintVertical_bias="0.96" />
+
+    <Button
+        android:id="@+id/taskGroup_addTask"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="Add Task"
+        android:textColor="#0E77ED"
+        android:background="#56E45F"
+        app:layout_constraintBottom_toTopOf="@+id/taskGroup_deleteTask"
+        app:layout_constraintEnd_toEndOf="@+id/taskGroup_deleteTask"
+        app:layout_constraintStart_toStartOf="@+id/taskGroup_deleteTask" />
+
+    <ListView
+        android:id="@+id/taskGroup_listView"
+        android:layout_width="395dp"
+        android:layout_height="503dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:cacheColorHint="@color/design_default_color_primary"
+        android:entries="@android:array/imProtocols"
+        app:layout_constraintBottom_toTopOf="@+id/taskGroup_addTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_top" />
+
+</android.support.constraint.ConstraintLayout>
